@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDECDBF91A88F9620068711D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDECDBF81A88F9620068711D /* FacebookSDK.framework */; };
 		FDF6E56D1A88AB3B00694DBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF6E56C1A88AB3B00694DBD /* Foundation.framework */; };
 		FDF6E56F1A88AB3B00694DBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF6E56E1A88AB3B00694DBD /* CoreGraphics.framework */; };
 		FDF6E5711A88AB3B00694DBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF6E5701A88AB3B00694DBD /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		FDF6E5961A88AB3B00694DBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDF6E5941A88AB3B00694DBD /* InfoPlist.strings */; };
 		FDF6E5981A88AB3B00694DBD /* oDeskTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E5971A88AB3B00694DBD /* oDeskTestTests.m */; };
 		FDF6E5A21A88AB9700694DBD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF6E5A11A88AB9700694DBD /* ViewController.xib */; };
-		FDF6E5A61A88ADB800694DBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF6E5A51A88ADB800694DBD /* FacebookSDK.framework */; };
 		FDF6E5A81A88B1F000694DBD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF6E5A71A88B1F000694DBD /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FDECDBF81A88F9620068711D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Libraries/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		FDF6E5691A88AB3B00694DBD /* oDeskTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oDeskTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF6E56C1A88AB3B00694DBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDF6E56E1A88AB3B00694DBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		FDF6E5951A88AB3B00694DBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FDF6E5971A88AB3B00694DBD /* oDeskTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = oDeskTestTests.m; sourceTree = "<group>"; };
 		FDF6E5A11A88AB9700694DBD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		FDF6E5A51A88ADB800694DBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		FDF6E5A71A88B1F000694DBD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,8 +65,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF6E5A81A88B1F000694DBD /* AddressBook.framework in Frameworks */,
+				FDECDBF91A88F9620068711D /* FacebookSDK.framework in Frameworks */,
 				FDF6E56F1A88AB3B00694DBD /* CoreGraphics.framework in Frameworks */,
-				FDF6E5A61A88ADB800694DBD /* FacebookSDK.framework in Frameworks */,
 				FDF6E5711A88AB3B00694DBD /* UIKit.framework in Frameworks */,
 				FDF6E56D1A88AB3B00694DBD /* Foundation.framework in Frameworks */,
 			);
@@ -107,8 +107,8 @@
 		FDF6E56B1A88AB3B00694DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDECDBF81A88F9620068711D /* FacebookSDK.framework */,
 				FDF6E5A71A88B1F000694DBD /* AddressBook.framework */,
-				FDF6E5A51A88ADB800694DBD /* FacebookSDK.framework */,
 				FDF6E56C1A88AB3B00694DBD /* Foundation.framework */,
 				FDF6E56E1A88AB3B00694DBD /* CoreGraphics.framework */,
 				FDF6E5701A88AB3B00694DBD /* UIKit.framework */,
@@ -381,6 +381,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/billaustad/Documents/FacebookSDK,
+					/Users/billaustad/Desktop/FacebookSample/Libraries/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "oDeskTest/oDeskTest-Prefix.pch";
@@ -402,6 +403,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/billaustad/Documents/FacebookSDK,
+					/Users/billaustad/Desktop/FacebookSample/Libraries/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "oDeskTest/oDeskTest-Prefix.pch";
@@ -476,6 +478,7 @@
 				FDF6E59D1A88AB3B00694DBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDF6E59E1A88AB3B00694DBD /* Build configuration list for PBXNativeTarget "oDeskTestTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +487,7 @@
 				FDF6E5A01A88AB3B00694DBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
