@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="dashBoard" destination="b9S-d6-gqf" id="1im-ex-2Jf"/>
+                <outlet property="loginView" destination="fBr-tv-CJT" id="d2W-9X-vsr"/>
+                <outlet property="nameLabel" destination="B6g-AK-k5M" id="0bq-7h-luW"/>
+                <outlet property="profilePictureView" destination="lUH-DU-FLl" id="j4H-Bu-SUE"/>
+                <outlet property="view" destination="1" id="jR4-vc-Ubm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9S-d6-gqf">
+                    <rect key="frame" x="33" y="113" width="255" height="118"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUH-DU-FLl" customClass="FBProfilePictureView">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="AYB-vj-Qlr"/>
+                                <constraint firstAttribute="width" constant="64" id="Lg5-iH-32b"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6g-AK-k5M">
+                            <rect key="frame" x="74" y="21" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYh-XG-wAm">
+                            <rect key="frame" x="81" y="88" width="94" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Show Friends">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showFriends:" destination="-1" eventType="touchUpInside" id="eMN-8A-kYd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lUH-DU-FLl" firstAttribute="leading" secondItem="b9S-d6-gqf" secondAttribute="leading" id="4b2-dv-gt2"/>
+                        <constraint firstItem="DYh-XG-wAm" firstAttribute="leading" secondItem="b9S-d6-gqf" secondAttribute="leading" constant="81" id="4iO-C0-EL4"/>
+                        <constraint firstItem="B6g-AK-k5M" firstAttribute="centerY" secondItem="lUH-DU-FLl" secondAttribute="centerY" id="J2i-3B-GGH"/>
+                        <constraint firstItem="B6g-AK-k5M" firstAttribute="leading" secondItem="lUH-DU-FLl" secondAttribute="trailing" constant="10" id="jwC-ca-dyB"/>
+                        <constraint firstItem="lUH-DU-FLl" firstAttribute="top" secondItem="b9S-d6-gqf" secondAttribute="top" id="oUH-hV-FjE"/>
+                        <constraint firstAttribute="bottom" secondItem="DYh-XG-wAm" secondAttribute="bottom" id="uDE-8N-e5h"/>
+                        <constraint firstAttribute="trailing" secondItem="DYh-XG-wAm" secondAttribute="trailing" constant="80" id="utz-NF-tDZ"/>
+                        <constraint firstItem="DYh-XG-wAm" firstAttribute="top" secondItem="lUH-DU-FLl" secondAttribute="bottom" constant="24" id="xUa-qt-74E"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBr-tv-CJT" customClass="FBLoginView">
+                    <rect key="frame" x="20" y="251" width="280" height="66"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="cog-Rn-M2m"/>
+                        <constraint firstAttribute="width" constant="280" id="dzI-Tt-p9c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fBr-tv-CJT" firstAttribute="top" secondItem="b9S-d6-gqf" secondAttribute="bottom" constant="20" id="EMR-54-KwR"/>
+                <constraint firstAttribute="centerX" secondItem="fBr-tv-CJT" secondAttribute="centerX" id="P41-7d-erF"/>
+                <constraint firstAttribute="centerY" secondItem="fBr-tv-CJT" secondAttribute="centerY" id="R5i-jo-Xnw"/>
+                <constraint firstAttribute="centerX" secondItem="b9S-d6-gqf" secondAttribute="centerX" id="TQH-hp-yFM"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
