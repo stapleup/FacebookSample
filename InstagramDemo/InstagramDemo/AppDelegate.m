@@ -17,8 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    ViewController *controller = [[ViewController alloc] initWithNibName:@"ViewController" bundle:Nil];
-    self.navigation = [[UINavigationController alloc] initWithRootViewController:controller];
+    [AppState synchronizeSettingsFromPhone];
+    
+    if([[AppState getAppState].user_id isEqualToString:@"0"]){
+        ViewController *controller = [[ViewController alloc] initWithNibName:@"ViewController" bundle:Nil];
+        self.navigation = [[UINavigationController alloc] initWithRootViewController:controller];
+    }else{
+        ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+        profile.userId = [AppState getAppState].user_id;
+        profile.name = [AppState getAppState].user_name;
+        profile.profilePic = [AppState getAppState].user_pic;
+        profile.authToken = [AppState getAppState].authToken;
+        self.navigation = [[UINavigationController alloc] initWithRootViewController:profile];
+    }
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigation;
     [self.window makeKeyAndVisible];

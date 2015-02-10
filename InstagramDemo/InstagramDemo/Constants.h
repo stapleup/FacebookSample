@@ -16,6 +16,6 @@
 
 #define authUrlString  @"https://api.instagram.com/oauth/authorize"
 #define tokenUrlString  @"https://api.instagram.com/oauth/access_token/"
-#define getFollowersString @"https://api.instagram.com/v1/users/%@/followed-by?access_token=%@"
+#define getFollowersString @"https://api.instagram.com/v1/users/%@/follows?access_token=%@"
 
 #endif

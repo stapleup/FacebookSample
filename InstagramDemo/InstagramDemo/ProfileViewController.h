@@ -15,6 +15,7 @@
 @interface ProfileViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 {
     NSMutableArray *friends;
+    IBOutlet UILabel *noResults;
     IBOutlet UILabel *userNameLabel;
     IBOutlet UIView *tableHeaderView;
     IBOutlet UIImageView *userProfilePic;

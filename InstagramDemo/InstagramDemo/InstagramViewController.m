@@ -64,13 +64,21 @@
                    parameters:data
                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
                     
-                    NSDictionary *user = [responseObject objectForKey:@"user"];
-                    ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-                    profile.userId = [user objectForKey:@"id"];
-                    profile.name = [user objectForKey:@"username"];
-                    profile.profilePic = [user objectForKey:@"profile_picture"];
-                    profile.authToken = [responseObject objectForKey:@"access_token"];
-                    [self.navigationController pushViewController:profile animated:YES];
+                          NSDictionary *user = [responseObject objectForKey:@"user"];
+                          
+                          AppState *state = [AppState getAppState];
+                          state.user_id = [user objectForKey:@"id"];
+                          state.user_name = [user objectForKey:@"username"];
+                          state.user_pic = [user objectForKey:@"profile_picture"];
+                          state.authToken = [responseObject objectForKey:@"access_token"];
+                          [AppState synchronizeSettingsToPhone];
+                          
+                          ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+                          profile.userId = [user objectForKey:@"id"];
+                          profile.name = [user objectForKey:@"username"];
+                          profile.profilePic = [user objectForKey:@"profile_picture"];
+                          profile.authToken = [responseObject objectForKey:@"access_token"];
+                          [self.navigationController pushViewController:profile animated:YES];
                     
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                     NSLog(@"Error: %@", error);

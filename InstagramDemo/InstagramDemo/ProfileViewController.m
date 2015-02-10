@@ -30,10 +30,14 @@
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              friends = [responseObject objectForKey:@"data"];
+             if([friends count]<=0){
+                 noResults.hidden = NO;
+             }
              [friendTableView reloadData];
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"");
+             noResults.hidden = NO;
+             noResults.text = [NSString stringWithFormat:@"Error, Server returned error code %ld", (long)operation.response.statusCode];
         }
      ];
 }

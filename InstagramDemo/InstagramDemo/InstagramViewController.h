@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppState.h"
 #import "Constants.h"
 #import "AFNetworking.h"
 #import "ProfileViewController.h"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0468881A89DE7D000EC6F6 /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0468871A89DE7D000EC6F6 /* AppState.m */; };
 		FD8EB2661A8912430093F2D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EB2651A8912430093F2D6 /* main.m */; };
 		FD8EB2691A8912430093F2D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EB2681A8912430093F2D6 /* AppDelegate.m */; };
 		FD8EB26C1A8912430093F2D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8EB26B1A8912430093F2D6 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD0468861A89DE7D000EC6F6 /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		FD0468871A89DE7D000EC6F6 /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
 		FD8EB2601A8912420093F2D6 /* InstagramDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8EB2641A8912430093F2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD8EB2651A8912430093F2D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 		FD8EB2D31A8922D40093F2D6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FD0468861A89DE7D000EC6F6 /* AppState.h */,
+				FD0468871A89DE7D000EC6F6 /* AppState.m */,
 				FD8EB2CD1A891B2D0093F2D6 /* Constants.h */,
 				FD8EB2CE1A891F2A0093F2D6 /* ProfileViewCell.h */,
 				FD8EB2CF1A891F2A0093F2D6 /* ProfileViewCell.m */,
@@ -368,6 +373,7 @@
 				FD8EB26C1A8912430093F2D6 /* ViewController.m in Sources */,
 				FD8EB2BA1A89144C0093F2D6 /* AFSecurityPolicy.m in Sources */,
 				FD8EB28E1A89138B0093F2D6 /* InstagramViewController.m in Sources */,
+				FD0468881A89DE7D000EC6F6 /* AppState.m in Sources */,
 				FD8EB2B71A89144C0093F2D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				FD8EB2CA1A8917D90093F2D6 /* ProfileViewController.m in Sources */,
 				FD8EB2BB1A89144C0093F2D6 /* AFURLConnectionOperation.m in Sources */,
@@ -498,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstagramDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -508,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstagramDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -566,6 +574,7 @@
 				FD8EB2851A8912430093F2D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD8EB2861A8912430093F2D6 /* Build configuration list for PBXNativeTarget "InstagramDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +583,7 @@
 				FD8EB2881A8912430093F2D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
